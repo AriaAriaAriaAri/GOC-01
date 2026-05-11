@@ -515,9 +515,8 @@ function getInitialLang(): Lang {
   } catch {
     // localStorage 不可用就降级为默认值
   }
-  // 第一次进入时根据浏览器语言粗略猜一下默认值
-  const navLang = (typeof navigator !== 'undefined' && navigator.language) || ''
-  if (navLang.toLowerCase().startsWith('zh')) return 'zh'
+  // 首次访问统一默认英文；用户在 LanguageSwitcher 切到中文后会写入 localStorage，
+  // 后续访问会优先读取保存的偏好。
   return 'en'
 }
 
