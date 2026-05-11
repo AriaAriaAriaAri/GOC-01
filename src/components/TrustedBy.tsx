@@ -1,11 +1,11 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 // 12 张 logo 已被设计成统一的 640×384 画布尺寸，logo 居中且视觉大小已对齐。
 // 用 brightness(0) invert(1) 把任意颜色的 logo 都统一成纯白，
 // 配合 opacity 实现 Figma "Trusted by" 暗淡白色质感。
-const LOGOS = Array.from(
-  { length: 12 },
-  (_, i) => `/assets/logos/${String(i + 1).padStart(2, '0')}.png`,
+const LOGOS = Array.from({ length: 12 }, (_, i) =>
+  asset(`/assets/logos/${String(i + 1).padStart(2, '0')}.png`),
 )
 
 export default function TrustedBy() {

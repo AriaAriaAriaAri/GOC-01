@@ -1,4 +1,5 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 export default function Hero() {
   const { t } = useLang()
@@ -7,12 +8,12 @@ export default function Hero() {
       {/* Floor + light-ray backgrounds */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <img
-          src="/assets/light-ray-background.png"
+          src={asset('/assets/light-ray-background.png')}
           alt=""
           className="absolute -top-20 left-1/2 w-[1920px] max-w-none -translate-x-1/2 opacity-90"
         />
         <img
-          src="/assets/floor-background.png"
+          src={asset('/assets/floor-background.png')}
           alt=""
           className="absolute inset-x-0 top-0 h-[1200px] w-full object-cover opacity-80"
         />
@@ -78,7 +79,7 @@ export default function Hero() {
           <div className="relative flex h-[550px] items-center justify-center pl-10">
             <div className="relative h-[550px] w-full max-w-[648px] overflow-hidden">
               <img
-                src="/assets/hero-product.png"
+                src={asset('/assets/hero-product.png')}
                 alt="GOC 01 dashboard preview"
                 className="h-full w-full object-cover object-center"
               />

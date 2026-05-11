@@ -1,4 +1,5 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 // 临时开关：暂时隐藏底部 5 列链接（Features/Resources/Company/Help/Community）。
 // 后续版本补齐内容时改成 true 即可恢复显示。
@@ -61,7 +62,7 @@ export default function Footer() {
           }`}
         >
           <a href="#" className="inline-flex">
-            <img src="/assets/logo-goc01.svg" alt="GOC 01" className="h-4 w-auto" />
+            <img src={asset('/assets/logo-goc01.svg')} alt="GOC 01" className="h-4 w-auto" />
           </a>
           {!SHOW_COLUMNS && (
             <FooterCopyright />

@@ -1,4 +1,5 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 export default function About() {
   const { t } = useLang()
@@ -8,7 +9,7 @@ export default function About() {
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 -z-10">
           <img
-            src="/assets/light-ray-background.png"
+            src={asset('/assets/light-ray-background.png')}
             alt=""
             className="absolute -top-20 left-1/2 w-[1920px] max-w-none -translate-x-1/2 opacity-60"
           />

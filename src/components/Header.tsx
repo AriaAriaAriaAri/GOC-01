@@ -1,5 +1,6 @@
 import type { MouseEvent } from 'react'
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 import LanguageSwitcher from './LanguageSwitcher'
 
 // 临时开关：暂时隐藏顶部导航菜单中的占位项。
@@ -35,7 +36,7 @@ export default function Header({ route }: { route?: Route }) {
       <div className="mx-auto flex h-[58px] max-w-[1280px] items-center justify-between px-6">
         <a href="#/" className="flex items-center gap-2">
           <img
-            src="/assets/logo-goc01.svg"
+            src={asset('/assets/logo-goc01.svg')}
             alt="GOC 01"
             className="h-4 w-auto"
           />

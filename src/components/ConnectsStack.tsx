@@ -1,17 +1,18 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 // 平台名属于品牌名，无需翻译
 const PLATFORMS = [
-  { name: 'Google Ads', logo: '/assets/logo-google-ads.svg' },
-  { name: 'Meta', logo: '/assets/logo-meta.svg' },
-  { name: 'Taboola', logo: '/assets/logo-taboola.svg' },
-  { name: 'Tiktok', logo: '/assets/logo-tiktok.svg' },
-  { name: 'Amazon DSP', logo: '/assets/logo-amazon.svg' },
-  { name: 'Snap', logo: '/assets/logo-snap.svg' },
-  { name: 'Shopify', logo: '/assets/logo-shopify.svg' },
-  { name: 'GA4', logo: '/assets/logo-ga4.svg' },
-  { name: 'Instagram', logo: '/assets/logo-instagram.svg' },
-  { name: 'X', logo: '/assets/logo-x.svg' },
+  { name: 'Google Ads', logo: asset('/assets/logo-google-ads.svg') },
+  { name: 'Meta', logo: asset('/assets/logo-meta.svg') },
+  { name: 'Taboola', logo: asset('/assets/logo-taboola.svg') },
+  { name: 'Tiktok', logo: asset('/assets/logo-tiktok.svg') },
+  { name: 'Amazon DSP', logo: asset('/assets/logo-amazon.svg') },
+  { name: 'Snap', logo: asset('/assets/logo-snap.svg') },
+  { name: 'Shopify', logo: asset('/assets/logo-shopify.svg') },
+  { name: 'GA4', logo: asset('/assets/logo-ga4.svg') },
+  { name: 'Instagram', logo: asset('/assets/logo-instagram.svg') },
+  { name: 'X', logo: asset('/assets/logo-x.svg') },
 ]
 
 export default function ConnectsStack() {

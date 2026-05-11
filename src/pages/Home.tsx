@@ -7,6 +7,7 @@ import ConnectsStack from '../components/ConnectsStack'
 import Pricing from '../components/Pricing'
 import Faq from '../components/Faq'
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 export default function Home() {
   const { t } = useLang()
@@ -17,23 +18,23 @@ export default function Home() {
       <PoweringGrowth />
       <Problem />
       <FeatureSection
-        decorImage="/assets/3d-broadcast-fallback.png"
+        decorImage={asset('/assets/3d-broadcast-fallback.png')}
         title={t.features.unifyAd.title}
         description={t.features.unifyAd.description}
-        bigImage="/assets/image-107.png"
+        bigImage={asset('/assets/image-107.png')}
       />
       <FeatureSection
-        decorImage="/assets/3d-chart-pie.png"
+        decorImage={asset('/assets/3d-chart-pie.png')}
         title={t.features.impulse.title}
         description={t.features.impulse.description}
-        bigImage="/assets/image-110.png"
+        bigImage={asset('/assets/image-110.png')}
         bigImageHeight={543}
       />
       <FeatureSection
-        decorImage="/assets/3d-channel-data.png"
+        decorImage={asset('/assets/3d-channel-data.png')}
         title={t.features.channel.title}
         description={t.features.channel.description}
-        bigImage="/assets/image-111.png"
+        bigImage={asset('/assets/image-111.png')}
         bigImageHeight={632}
         decorScale={1.3}
       />

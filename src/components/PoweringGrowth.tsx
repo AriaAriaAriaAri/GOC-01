@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 type StatNumber = {
   /** 动画终点数值 */
@@ -106,7 +107,7 @@ export default function PoweringGrowth() {
       className="mx-auto flex max-w-[1280px] scroll-mt-[58px] flex-col items-center px-6 py-24"
     >
       <img
-        src="/assets/3d-control-fallback.png"
+        src={asset('/assets/3d-control-fallback.png')}
         alt=""
         className="h-[170px] w-[170px] object-contain"
       />

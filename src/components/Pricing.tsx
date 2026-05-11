@@ -1,4 +1,5 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 // 价格本身（金额、人民币 / 美元符号）不做翻译，直接保留
 const BASE_PRICES = ['$0.05/session', '$0.04/session', '$0.03/session']
@@ -14,7 +15,7 @@ export default function Pricing() {
       className="mx-auto flex max-w-[1280px] scroll-mt-[58px] flex-col items-center px-6 py-24"
     >
       <img
-        src="/assets/3d-pricing.png"
+        src={asset('/assets/3d-pricing.png')}
         alt=""
         className="h-[170px] w-[170px] object-cover object-center"
       />
@@ -82,7 +83,7 @@ export default function Pricing() {
             <ul className="mt-3 space-y-3">
               {base.includes.map((inc) => (
                 <li key={inc} className="flex items-center gap-2">
-                  <img src="/assets/icon-check.svg" alt="" className="h-3.5 w-3.5" />
+                  <img src={asset('/assets/icon-check.svg')} alt="" className="h-3.5 w-3.5" />
                   <span className="text-[14px] leading-[20px] text-[#9f9fa9]">{inc}</span>
                 </li>
               ))}

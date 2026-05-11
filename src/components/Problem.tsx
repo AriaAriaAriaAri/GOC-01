@@ -1,9 +1,10 @@
 import { useLang } from '../i18n'
+import { asset } from '../lib/asset'
 
 const ICONS = [
-  '/assets/icon-events.svg',
-  '/assets/icon-overclaim.svg',
-  '/assets/icon-targeting.svg',
+  asset('/assets/icon-events.svg'),
+  asset('/assets/icon-overclaim.svg'),
+  asset('/assets/icon-targeting.svg'),
 ]
 
 export default function Problem() {
