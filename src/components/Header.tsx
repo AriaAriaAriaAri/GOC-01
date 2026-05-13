@@ -1,6 +1,7 @@
 import type { MouseEvent } from 'react'
 import { useLang } from '../i18n'
 import { asset } from '../lib/asset'
+import { SHOW_PRICING } from './Pricing'
 import LanguageSwitcher from './LanguageSwitcher'
 
 // 临时开关：暂时隐藏顶部导航菜单中的占位项。
@@ -79,13 +80,15 @@ export default function Header({ route }: { route?: Route }) {
             {t.nav.features}
           </a>
 
-          <a
-            href="#pricing"
-            onClick={handleSectionClick('pricing')}
-            className="px-3 py-2 rounded-md text-white/70 hover:text-white transition-colors"
-          >
-            {t.nav.pricing}
-          </a>
+          {SHOW_PRICING && (
+            <a
+              href="#pricing"
+              onClick={handleSectionClick('pricing')}
+              className="px-3 py-2 rounded-md text-white/70 hover:text-white transition-colors"
+            >
+              {t.nav.pricing}
+            </a>
+          )}
 
           <a
             href="#/about"

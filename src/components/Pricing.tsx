@@ -1,6 +1,11 @@
 import { useLang } from '../i18n'
 import { asset } from '../lib/asset'
 
+// 临时开关：价格方案还没定好，先把整个 Pricing 区块和 Header 里的 Pricing
+// 导航 tab 一起隐藏。后面价格定了，改成 true 即可恢复显示。
+// （Header 里通过 import 这个常量来同步控制导航，无需重复改两处。）
+export const SHOW_PRICING = false
+
 // 价格本身（金额、人民币 / 美元符号）不做翻译，直接保留
 const BASE_PRICES = ['$0.05/session', '$0.04/session', '$0.03/session']
 
@@ -8,6 +13,8 @@ export default function Pricing() {
   const { t } = useLang()
   const base = t.pricing.base
   const addon = t.pricing.addon
+
+  if (!SHOW_PRICING) return null
 
   return (
     <section
