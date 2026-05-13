@@ -33,7 +33,13 @@ export default function LanguageSwitcher() {
   const currentKey: 'en' | 'zh' = lang === 'zh' ? 'zh' : 'en'
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="relative flex items-center gap-2">
+      <span
+        aria-hidden
+        className="hidden text-[14px] font-medium text-white/60 sm:inline"
+      >
+        {t.lang.label}
+      </span>
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -42,9 +48,6 @@ export default function LanguageSwitcher() {
         aria-label={`${t.lang.label}: ${t.lang.toggleLabel}`}
         className="flex h-9 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 text-[13px] text-white/80 transition-colors hover:bg-white/[0.06] hover:text-white"
       >
-        <span className="hidden text-[14px] font-medium text-white/60 sm:inline">
-          {t.lang.label}
-        </span>
         {/* globe icon */}
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2" />
