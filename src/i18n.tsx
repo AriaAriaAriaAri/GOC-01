@@ -24,6 +24,7 @@ const en = {
   lang: {
     en: 'English',
     zh: '简体中文',
+    label: 'Language',
     toggleLabel: 'Switch language',
   },
   hero: {
@@ -271,6 +272,7 @@ const zh: Translations = {
   lang: {
     en: 'English',
     zh: '简体中文',
+    label: '语言',
     toggleLabel: '切换语言',
   },
   hero: {
